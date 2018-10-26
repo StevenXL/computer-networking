@@ -1,0 +1,48 @@
+name:                computer-networking
+version:             0.1.0.0
+github:              "stevenxl/computer-networking"
+license:             BSD3
+author:              "Steven Leiva"
+maintainer:          "leiva.steven@gmail.com"
+copyright:           "Copyright: (c) 2018 Steven Leiva"
+
+extra-source-files:
+- README.md
+- ChangeLog.md
+
+# Metadata used when publishing your package
+# synopsis:            Short description of your package
+# category:            Web
+
+# To avoid duplicated efforts in documentation and dealing with the
+# complications of embedding Haddock markup inside cabal files, it is
+# common to point users to the README.md file.
+description:         Please see the README on GitHub at <https://github.com/stevenxl/computer-networking#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+
+library:
+  source-dirs: src
+
+executables:
+  computer-networking-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - computer-networking
+
+tests:
+  computer-networking-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - computer-networking
