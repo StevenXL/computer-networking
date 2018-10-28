@@ -24,6 +24,8 @@ dependencies:
 - network
 - bytestring
 - time
+- megaparsec
+- text
 
 library:
   source-dirs: src
